@@ -36,11 +36,11 @@ function removeJsonValue(json){
 			if(jsonValue.lentgh != 'undefined' && jsonValue.length > 0){
 				var arr = json[key];
 				for(var i = 0; i<arr.length; i++){
-					handleJson(arr[i]);				
+					removeJsonValue(arr[i]);				
 				}
 			//value is json object
 			}else{
-				handleJson(jsonValue);
+				removeJsonValue(jsonValue);
 			}
 		}else{
 			json[key] = '';
